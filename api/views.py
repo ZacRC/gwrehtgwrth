@@ -15,7 +15,11 @@ from openai import OpenAI
 import openai
 from django.conf import settings
 
-client = OpenAI(api_key=settings.OPENAI_API_KEY)
+from dotenv import load_dotenv
+
+load_dotenv()
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def register_user(request):
