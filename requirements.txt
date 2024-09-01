@@ -1,0 +1,12 @@
+django
+djangorestframework
+django-cors-headers
+djangorestframework-simplejwt
+psycopg2
+djangorestframework
+gunicorn
+django-environ
+django-dotenv
+django-storages
+python-dotenv
+whitenoise
