@@ -171,7 +171,5 @@ SIMPLE_JWT = {
     'BLACKLIST_AFTER_ROTATION': True,
 }
 
-OPENAI_API_KEY = "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"
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
