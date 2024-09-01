@@ -173,3 +173,10 @@ SIMPLE_JWT = {
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Add these lines near the end of the file
+DATA_UPLOAD_MAX_MEMORY_SIZE = 1073741824  # 1GB in bytes
+FILE_UPLOAD_MAX_MEMORY_SIZE = 1073741824  # 1GB in bytes
+
+# Increase the timeout for file uploads
+FILE_UPLOAD_TIMEOUT = 300  # 5 minutes
