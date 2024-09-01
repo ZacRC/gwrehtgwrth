@@ -36,6 +36,10 @@ COPY . .
 RUN mkdir -p /app/staticfiles
 
 # Collect static files
+ARG ALLOWED_HOSTS
+ENV ALLOWED_HOSTS=${ALLOWED_HOSTS}
+ARG SECRET_KEY
+ENV SECRET_KEY=${SECRET_KEY}
 RUN python manage.py collectstatic --noinput
 
 # Run the application
