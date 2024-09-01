@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CustomUser
+from .models import CustomUser, AudioFile, Transcription
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,3 +10,13 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         user = CustomUser.objects.create_user(**validated_data)
         return user
+
+class AudioFileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AudioFile
+        fields = ('id', 'file', 'created_at')
+
+class TranscriptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Transcription
+        fields = ('id', 'audio_file', 'text', 'created_at')

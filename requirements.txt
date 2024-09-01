@@ -10,3 +10,6 @@ django-dotenv
 django-storages
 python-dotenv
 whitenoise
+openai
+whisper
+moviepy
