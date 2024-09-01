@@ -6,3 +6,4 @@ frontend/src
 frontend/package.json
 frontend/README.md
 frontend/tsconfig.json
+.env
