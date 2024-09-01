@@ -180,3 +180,6 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 1073741824  # 1GB in bytes
 
 # Increase the timeout for file uploads
 FILE_UPLOAD_TIMEOUT = 300  # 5 minutes
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True

@@ -17,7 +17,11 @@ services:
     volumes:
       - static_volume:/app/staticfiles
       - ./frontend/build:/app/frontend/build
-    command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000 --timeout 300  # Increase timeout
+    command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000 --workers 3 --timeout 600
+    deploy:
+      resources:
+        limits:
+          memory: 2g  # Set memory limit to 2GB
 
   nginx:
     image: nginx:alpine
