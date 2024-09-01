@@ -32,8 +32,7 @@ COPY --from=builder /usr/local/bin /usr/local/bin
 # Copy project files
 COPY . .
 
-# Create necessary directories
-RUN mkdir -p /app/staticfiles
+
 
 # Collect static files
 ARG ALLOWED_HOSTS
